@@ -1,0 +1,26 @@
+Source: node-invariant
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-loose-envify <!nocheck>
+ , node-tap <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-invariant
+Vcs-Git: https://salsa.debian.org/js-team/node-invariant.git
+Homepage: https://github.com/zertosh/invariant
+Rules-Requires-Root: no
+
+Package: node-invariant
+Architecture: all
+Depends: ${misc:Depends}
+ , node-loose-envify
+Provides: ${nodejs:Provides}
+Description: assert function
+ Node.js module to provide descriptive errors in development but
+ generic errors in production.
+ .
+ Node.js is an event-based server-side JavaScript engine.
